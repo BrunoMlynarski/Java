@@ -2,9 +2,11 @@ package com.company.homework.Login;
 
 public class Login {
     private String text;
-Login (String text){
-    this.text = text;
-}
+
+    Login (String text){
+        this.text = text;
+    }
+
     boolean checkingCharacters(){
     for(int i = 0; i < text.length(); i++){
         if(!(isUnderScore(i) || isNumber(i) || isLowerLetter(i) || isUpperLetter(i))){
@@ -20,7 +22,7 @@ Login (String text){
         return true;
     }
     boolean checkingFirstCharacter(){
-        if(!(isNotFirstUpperLetterCharacter())){
+        if(!(isFirstUpperLetterCharacter() || isFirstLowerLetterCharacter())){
             return false;
         }
         return true;
@@ -45,8 +47,11 @@ Login (String text){
     private boolean isLongLogin(){
         return text.length() <= 30;
     }
-    private boolean isNotFirstUpperLetterCharacter(){
+    private boolean isFirstUpperLetterCharacter(){
      return text.charAt(0) >= 65 && text.charAt(0) <= 90 ;
     }
+    private boolean isFirstLowerLetterCharacter(){
+        return text.charAt(0) >= 97 && text.charAt(0) <= 122 ;
+    }
 }
-//Popraw nazwy
+

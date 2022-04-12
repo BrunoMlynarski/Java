@@ -19,5 +19,22 @@ public class Main {
                 logins.add(new Login(text));
             }
         }
+
+        int count = logins.size();
+        for(int i = 0; i < count ;i++){
+            if(logins.get(i).checkingCharacters() == false){
+                System.out.println("Invalid");
+            }
+            else if(logins.get(i).checkingFirstCharacter() == false){
+                System.out.println("Invalid");
+            }
+            else if(logins.get(i).checkingLength() == false){
+                System.out.println("Invalid");
+            }
+            else{
+                System.out.println("Valid");
+            }
+        }
     }
 }
+

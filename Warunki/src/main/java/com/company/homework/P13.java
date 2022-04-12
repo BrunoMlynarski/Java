@@ -38,13 +38,13 @@ public class P13 {
                     break;
                 }
             }
-                    if(words.get(i).length() < 8){
+                    if(words.get(i).length() < 8){  //
                         System.out.println("Invalid");
                     }
-                    else if(words.get(i).length() > 30){
+                    else if(words.get(i).length() > 30){   //
                         System.out.println("Invalid");
                     }
-                    else if(!(words.get(i).charAt(0) >= 65 && words.get(i).charAt(0) <= 90 )){
+                    else if(!(words.get(i).charAt(0) >= 65 && words.get(i).charAt(0) <= 90 )){ //
                         System.out.println("Invalid");
                     }
                     else if(value == 1){
