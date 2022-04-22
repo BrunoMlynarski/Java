@@ -12,15 +12,4 @@ public enum EnumTicTacToe {
         return this.value;
     }
 
-    static EnumTicTacToe from(String value) throws Exception {
-        if ("X".equals(value)){
-            return X;
-        }
-        else if("O".equals(value)){
-            return O;
-        }
-        else {
-            throw new Exception("true value is only X or O");
-        }
-    }
 }

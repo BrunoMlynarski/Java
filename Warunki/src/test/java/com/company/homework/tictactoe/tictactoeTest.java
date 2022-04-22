@@ -1,6 +1,5 @@
 package com.company.homework.tictactoe;
 
-import com.company.homework.Tags.Tags;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +20,7 @@ class tictactoeTest {
     @Test
     void shouldStartGameMustPrintAlert(){
     //given
-        FiledChoosingAndCompletingArray startAlert = new FiledChoosingAndCompletingArray();
+        GamePlayerVsPlayer startAlert = new GamePlayerVsPlayer();
 
         //when
         startAlert.start();
@@ -32,7 +31,7 @@ class tictactoeTest {
     @Test
     void shouldPrintStartGameMap(){
         //given
-        FiledChoosingAndCompletingArray startAlert = new FiledChoosingAndCompletingArray();
+        GamePlayerVsPlayer startAlert = new GamePlayerVsPlayer();
 
         //when
         startAlert.printBoard();
@@ -47,16 +46,9 @@ class tictactoeTest {
         assertEquals("3: |_|_|_|",stringTab[4] );
     }
     @Test
-    void takingPlayerNames(){
-        //given
-        FiledChoosingAndCompletingArray nameText = new FiledChoosingAndCompletingArray("ona);
-
-                //when
-    }
-    @Test
     void ShouldGiveMeNotError(){
         //given
-        FiledChoosingAndCompletingArray startAlert = new FiledChoosingAndCompletingArray();
+        GamePlayerVsPlayer startAlert = new GamePlayerVsPlayer();
 
         //when
         startAlert.start();
@@ -64,6 +56,9 @@ class tictactoeTest {
         //then
         assertEquals("Start Game", outputStreamCaptor.toString().trim());
     }
+
+
+
 
 
 }
