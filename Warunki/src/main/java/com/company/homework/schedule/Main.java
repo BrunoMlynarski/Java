@@ -1,15 +1,19 @@
 package com.company.homework.schedule;
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
-        DataBaseOfScheduledVehicles database = new DataBaseOfScheduledVehicles();
+        DataBaseOfScheduledVehicles database = DataBaseOfScheduledVehicles.getInstance();
+        Displays.welcome();
 
-//
-//        AddNewVehicleToSchedule.startAdd(database);
-//        AddNewVehicleToSchedule.startAdd(database);
-//        AddNewVehicleToSchedule.startAdd(database);
-//        AddNewVehicleToSchedule.remove(database);
-//
+       MainMenu startMain = new MainMenu();
+       while (true) {
+           startMain.startMain(database);
+
+       }
+//napisać to w pętli
+
 
     }
 }

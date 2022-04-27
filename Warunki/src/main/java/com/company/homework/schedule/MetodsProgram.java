@@ -8,12 +8,13 @@ import java.util.Scanner;
 class MetodsProgram {
     static UserOptions collectionAndChoosenUserOption() {
         Scanner userOptionScan = new Scanner(System.in);
+        Displays.viewOptions();
         int choosenUserOption = 0;
         while (true) {
             try {
                 choosenUserOption = userOptionScan.nextInt();
             } catch (InputMismatchException e) {
-                System.out.println("Please choose again game mode.");
+                System.out.println("Please choose again option");
                 userOptionScan.next();
             }
             if (choosenUserOption == 1) {
@@ -28,11 +29,9 @@ class MetodsProgram {
             else if (choosenUserOption == 4) {
                 return UserOptions.VIEW;
             }
+            else if (choosenUserOption == 5){
+                return UserOptions.CLOSE;
+            }
         }
     }
-
-    void addNewVehicletoSchedule(){
-
-    }
-
 }
